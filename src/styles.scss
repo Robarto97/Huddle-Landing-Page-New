@@ -107,12 +107,15 @@ main {
         display: block;
         margin-bottom: 2em;
       }
-      h2 {
-        font-size: 1.25em;
-      }
-      p {
-        color: $grayishBlue;
-        font-size: 0.9em;
+      .text {
+        h2 {
+          font-size: 1.25em;
+          margin-bottom: 0.75em;
+        }
+        p {
+          color: $grayishBlue;
+          font-size: 0.9em;
+        }
       }
     }
   }
@@ -221,5 +224,151 @@ footer {
   .copy {
     font-size: 0.75em;
     margin: 0.5em auto;
+  }
+}
+
+@media screen and (width >425px) {
+  header {
+    padding: 4em 5em;
+    background-image: url(images/bg-hero-desktop.svg);
+    .top {
+      .logo {
+        width: 15%;
+      }
+      button {
+        font-size: 1em;
+        padding: 0.75em 4em;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+      button:hover {
+        color: $grayishBlue;
+      }
+    }
+    .header-content {
+      padding: unset;
+      display: flex;
+      align-items: center;
+      gap: 4em;
+      padding-top: 4em;
+      .text {
+        align-items: flex-start;
+        text-align: left;
+        width: 60%;
+        h1 {
+          font-size: 2.5em;
+        }
+        p {
+          font-size: 1em;
+        }
+        button {
+          width: 50%;
+          padding: 1em;
+          cursor: pointer;
+          font-size: 0.9em;
+          transition: opacity 0.3s ease;
+        }
+        button:hover {
+          opacity: 0.6;
+        }
+      }
+      .img-wrapper {
+        padding: unset;
+      }
+    }
+  }
+  main {
+    padding: 8em 5em 3em;
+    ul {
+      li {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2em 2em 1em 5em;
+        img {
+          width: 30%;
+        }
+        .text {
+          text-align: left;
+          width: 50%;
+          h2 {
+            font-size: 1.5em;
+          }
+          p {
+            font-size: 1.2em;
+          }
+        }
+      }
+      li:nth-child(2n) {
+        flex-direction: row;
+      }
+    }
+    .community {
+      width: 70%;
+      margin: 0 auto;
+      gap: 2em;
+      padding: 3em;
+      h2 {
+        font-size: 2.25em;
+      }
+      button {
+        width: 55%;
+        font-size: 1.25em;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+      }
+      button:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+  footer {
+    padding: 8em 5em;
+    gap: 0em;
+    padding-bottom: 3em;
+    .logo {
+      margin-bottom: 2em;
+    }
+    .links {
+      flex-direction: row;
+      gap: 5em;
+      align-items: flex-start;
+      .address {
+        width: 35%;
+        p {
+          font-size: 0.95em;
+          line-height: 1.5;
+        }
+      }
+      .questions {
+        width: 30%;
+        ul {
+          max-height: 23vh;
+          flex-wrap: wrap;
+          width: 100%;
+          gap: 1.5em;
+          li {
+            a:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      .icons {
+        .icon {
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        .icon:hover {
+          color: $pink;
+          border-color: $pink;
+        }
+      }
+    }
+    .copy {
+      margin: unset;
+      margin-left: auto;
+      margin-top: -1.5em;
+    }
   }
 }
